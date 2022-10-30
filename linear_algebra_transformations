@@ -1,0 +1,89 @@
+//1a
+D = [1 2 1 1 2 5 3 2; 1 2 2 3 2 2 1 2]
+x = D(1,:);
+y = D(2,:);
+plot(x, y, '.', x, y, '-')
+axis([0 5 0 4])
+legend('Figure one')
+title('1a')
+
+//1b
+A = [-1 0; 0 1];
+AD = A*D
+x1 = AD(1,:);
+y1 = AD(2,:);
+plot(x, y, '.', x, y, '-', x1, y1, '.', x1, y1, '-')
+axis([-5 5 0 4])
+legend('original point', 'original edge', 'reflected point', 'reflected edge')
+title('1b')
+
+//1c
+A = [cos(pi/4) -sin(pi/4); sin(pi/4) cos(pi/4)];
+AD = A*D
+x1 = AD(1,:);
+y1 = AD(2,:);
+plot(x, y, '.', x, y, '-', x1, y1, '.', x1, y1, '-')
+axis([-2 5 0 5])
+legend('original point', 'original edge', 'rotated point', 'rotated edge')
+title('1c')
+
+//1d
+AD = 3*D
+x1 = AD(1,:);
+y1 = AD(2,:);
+plot(x, y, '.', x, y, '-', x1, y1, '.', x1, y1, '-')
+axis([0 15 0 9])
+legend('original point', 'original edge', 'dilated point', 'dilated edge')
+title('1d')
+
+//1e
+D2 = 2*D
+A = [cos(pi/2) -sin(pi/2); sin(pi/2) cos(pi/2)];
+AD = A*D2
+x1 = AD(1,:);
+y1 = AD(2,:);
+plot(x, y, '.', x, y, '-', x1, y1, '.', x1, y1, '-')
+axis([-6 5 0 10])
+legend('original point', 'original edge', 'transformed point', 'transformed edge')
+title('1e')
+
+
+//2a
+D = [1, 1, 4, 4, 2, 2, 3, 3, 2, 2, 4, 4, 1; 0 7 7 5 5 4 4 3 3 2 2 0 0]
+x = D(1,:);
+y = D(2,:);
+plot(x, y, '.', x, y, '-')
+axis([0 5 0 8])
+legend('The letter E')
+title('2a')
+
+//2b 
+AD = 7*D
+x1 = AD(1,:);
+y1 = AD(2,:);
+plot(x, y, '.', x, y, '-', x1, y1, '.', x1, y1, '-')
+axis([0 30 0 60])
+legend('original point', 'original edge', 'dilated e', 'dilated e')
+title('2b')
+
+//2c
+A = [1 0; 0 -1];
+AD = A*D
+x1 = AD(1,:);
+y1 = AD(2,:);
+plot(x, y, '.', x, y, '-', x1, y1, '.', x1, y1, '-')
+axis([0 5 -8 8])
+legend('original point', 'original edge', 'reflected e', 'reflected e')
+title('2c')
+
+//2d
+D2 = 7*D
+A = [1 0; 0 -1];
+AD = A*D2
+x1 = AD(1,:);
+y1 = AD(2,:);
+plot(x, y, '.', x, y, '-', x1, y1, '.', x1, y1, '-')
+axis([0 30 -50 10])
+legend('original point', 'original edge', 'transformed e', 'transformed e')
+title('2d')
+
